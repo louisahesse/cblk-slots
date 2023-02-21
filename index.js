@@ -1,8 +1,12 @@
 function toggleAnswer(id) {
+  console.log("hello");
   const answer = document.getElementById("answer" + id);
-  if (answer.style.display === "none") {
-    answer.style.display = "block";
-  } else {
-    answer.style.display = "none";
-  }
+  console.log(answer);
+  answer.style.display = "block";
+  answer.style.height = "100px";
+
+  // if (answer.style.display === "none") {
+  // } else {
+  //   answer.style.display = "none";
+  // }
 }
