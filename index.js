@@ -1,12 +1,14 @@
-function toggleAnswer(id) {
-  console.log("hello");
-  const answer = document.getElementById("answer" + id);
-  console.log(answer);
-  answer.style.display = "block";
-  answer.style.height = "100px";
+var acc = document.getElementsByClassName("accordion");
+var i;
 
-  // if (answer.style.display === "none") {
-  // } else {
-  //   answer.style.display = "none";
-  // }
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }
